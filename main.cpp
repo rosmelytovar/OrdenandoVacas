@@ -2,6 +2,8 @@
 #include<conio.h>
 #include<stdlib.h>
 #include <stdio.h>
+#include <iomanip>
+#include "libgen.h"
 #include"vaca.h"
 #include"Ancho.h"
 
@@ -50,3 +52,49 @@ int main (int argc,char**argv){
                          system("cls");
 						  
 				 break;
+				 case '2':
+				 	system("cls");
+           cout<<"\n ******************************** " <<endl;
+           cout<<"\n *            Ordenar           * " <<endl;
+           cout<<"\n * 1. Ordenar por Nombre.       * " <<endl;
+           cout<<"\n * 2. Ordenar por Raza          * " <<endl;
+           cout<<"\n * 3. Ordenar por Litros.       * " <<endl;
+           cout<<"\n * 4. Ordenar por Peso.         * " <<endl;
+		   cout<<"\n * Digite su Opcion:            * " <<endl;
+		   cout<<"\n ******************************** " <<endl;
+           cin>>opc;
+           
+            switch(opc)
+		  {
+		  		case '3':
+			system("cls");
+	            int k;
+	            int l;
+                   for (k = 0; k < acomulador; k++) {
+		               for (l = 0; l<= acomulador-2; l++) {
+			              if (Mariposa[l].getLitrosDeLeche()>Mariposa[l+1].getLitrosDeLeche()){
+			                 Vaca aux = Mariposa[l];
+				             Mariposa[l] = Mariposa[l+1];
+				             Mariposa[l+1] = aux;
+			                }
+		                }	
+	                }   
+            break;		
+	 
+			case '4':
+			system("cls");
+	            int i;
+	            int j;
+                   for (i = 0; i < acomulador; i++) {
+		               for (j = 0; j <= acomulador-2; j++) {
+			              if (Mariposa[j].getPeso()>Mariposa[j+1].getPeso()){
+			                 Vaca aux = Mariposa[j];
+				             Mariposa[j] = Mariposa[j+1];
+				             Mariposa[j+1] = aux;
+			                }
+		                }	
+	                }   
+            break;		
+	 
+}
+                
