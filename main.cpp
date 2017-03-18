@@ -97,4 +97,35 @@ int main (int argc,char**argv){
             break;		
 	 
 }
-                
+                cout<<setw(15)<<left<<"Nombre"<<setw(15)<<left<<"Raza"<<setw(15)<<left<<"Litros"<<setw(15)<<left<<"Peso"<<endl;
+				 	for(int x=0;x<acomulador;x++){
+				 	
+						cout<<setw(15)<<left<<Mariposa[x].getNombre();
+						cout<<setw(15)<<left<<Mariposa[x].getRaza();
+						cout<<setw(15)<<left<<Mariposa[x].getLitrosDeLeche();
+						cout<<setw(15)<<left<<Mariposa[x].getPeso()<<endl;
+					 }
+					 cout<<endl;
+					 system("pause");
+					 system("cls");
+                         
+				 break;
+				 case '3':
+					system("cls");
+					return 0;
+					system("pause");
+					break;
+				default:
+					system("cls");
+					cout<<"Seleccione una opcion valida\n";
+					system("pause");
+					system("cls");
+				break;
+			}while(opc!=3);
+					
+    }     
+     } while(opc!='3');
+      system("PAUSE");
+      return 0;
+}
+
